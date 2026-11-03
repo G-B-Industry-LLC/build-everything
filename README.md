@@ -2,9 +2,21 @@
 
 **Learn by rebuilding. Prove it works.**
 
-Build Everything is a free, open-source collection of executable labs for rebuilding the technologies that power modern computing. Every ready lab includes a plain-language explanation, a bounded build, automated acceptance tests, and a proof command.
+Build Everything is a free, open-source collection of guided projects for rebuilding the technologies that power modern computing. Every ready lab explains the idea in ordinary language, shows where people use it, guides one small build, and includes an automatic check that proves it works.
 
-This is not another list of links. A lab is not marked ready until a clean checkout can verify it.
+This is not another list of links. A lab is not marked ready until a new learner can understand its purpose and a clean checkout can verify the result.
+
+## Start without feeling lost
+
+You do not need to understand the whole internet before you begin.
+
+1. Pick a **Beginner** lab.
+2. Read **The big idea** and **Where this is used**.
+3. Follow one step at a time.
+4. Run **Prove it works**.
+5. Change one small thing and explain what happened.
+
+Teen learners can use the beginner track independently if they are comfortable running a command. Younger learners should work with a parent, teacher, or mentor. The guide explains the ideas, but an adult should still supervise software installation and terminal use.
 
 ## Why this exists
 
@@ -15,10 +27,10 @@ The internet has excellent "build your own" tutorials, but learners still face f
 - examples are hard to compare by time, difficulty, or prerequisites;
 - reading can feel like progress even when nothing runs.
 
-Build Everything turns learning into evidence:
+Build Everything turns learning into understanding you can demonstrate:
 
 ```text
-choose a system -> understand the contract -> build it -> run the proof -> explain the tradeoffs
+see it in real life -> understand the idea -> build a small version -> prove it works -> explain it back
 ```
 
 ## Start here
@@ -44,17 +56,20 @@ Then visit `http://127.0.0.1:8080/health`.
 
 Catalog metadata lives in [`catalog/labs.json`](catalog/labs.json) and is validated in CI.
 
-## What makes a lab trustworthy
+## What makes a lab understandable and trustworthy
 
 Every ready lab must provide:
 
-1. a small, useful target;
-2. the protocol or behavior contract;
-3. a reference implementation using minimal dependencies;
-4. automated acceptance tests;
-5. a proof command that works from a clean checkout;
-6. security and failure-mode notes;
-7. an explanation of what the simplified build intentionally omits.
+1. a one-paragraph big idea with no unexplained jargon;
+2. familiar examples showing where the technology is used;
+3. the learner's age guidance, prerequisites, result, and expected time;
+4. short steps with a visible result after each meaningful stage;
+5. a small reference implementation using minimal dependencies;
+6. an automatic proof command that works from a clean checkout;
+7. a plain-language glossary, safety notes, and intentional limitations;
+8. a short “explain it back” check so running code is not mistaken for understanding.
+
+The machine-readable catalog includes the same audience, prerequisite, result, application, and proof information. That lets websites, teachers, and coding agents present a lab without inventing missing context.
 
 ## Designed for humans and coding agents
 
@@ -75,5 +90,5 @@ Start with [`CONTRIBUTING.md`](CONTRIBUTING.md). New labs begin as a proposal an
 
 ## Ambition
 
-The goal is to become the most useful place on GitHub to learn how technology works—not by collecting the most links, but by producing the most verified understanding.
+The goal is to become the most useful place on GitHub to learn how technology works—not by collecting the most links, but by making the ideas understandable and the results provable.
 

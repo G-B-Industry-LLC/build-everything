@@ -9,6 +9,17 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "catalog" / "labs.json"
 VALID_STATUS = {"planned", "in-progress", "verified", "needs-repair"}
 VALID_LEVEL = {"beginner", "intermediate", "advanced"}
+REQUIRED_GUIDE_SECTIONS = [
+    "## The big idea",
+    "## Where this is used",
+    "## What you will make",
+    "## Before you start",
+    "## Build it",
+    "## Prove it works",
+    "## Explain it back",
+    "## Glossary",
+    "## Safety and limits",
+]
 
 
 def validate_catalog() -> list[dict]:
@@ -34,10 +45,21 @@ def validate_catalog() -> list[dict]:
             raise ValueError(f"invalid level for {lab_id}")
         if not isinstance(lab.get("minutes"), int) or lab["minutes"] < 1:
             raise ValueError(f"invalid duration for {lab_id}")
+        for field in ("audience", "result"):
+            if not isinstance(lab.get(field), str) or not lab[field].strip():
+                raise ValueError(f"missing {field} for {lab_id}")
+        for field in ("prerequisites", "applications"):
+            value = lab.get(field)
+            if not isinstance(value, list) or not value or not all(isinstance(item, str) and item.strip() for item in value):
+                raise ValueError(f"missing {field} for {lab_id}")
         if lab["status"] == "verified":
             lab_path = ROOT / lab.get("path", "")
             if not lab_path.is_dir() or not (lab_path / "README.md").is_file():
                 raise ValueError(f"verified lab is incomplete: {lab_id}")
+            guide = (lab_path / "README.md").read_text(encoding="utf-8")
+            missing_sections = [section for section in REQUIRED_GUIDE_SECTIONS if section not in guide]
+            if missing_sections:
+                raise ValueError(f"verified lab guide is missing sections for {lab_id}: {', '.join(missing_sections)}")
             proof = lab.get("proof")
             if not isinstance(proof, list) or not proof or not all(
                 isinstance(argument, str) and argument for argument in proof
