@@ -1,0 +1,61 @@
+{
+  "schema_version": "build-everything.catalog.v1",
+  "labs": [
+    {
+      "id": "http-server-python",
+      "title": "Build an HTTP server from sockets",
+      "status": "verified",
+      "level": "beginner",
+      "minutes": 45,
+      "language": "Python",
+      "path": "labs/http-server-python",
+      "proof": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/http-server-python/tests",
+        "-v"
+      ],
+      "concepts": ["TCP", "HTTP/1.1", "request parsing", "status codes"]
+    },
+    {
+      "id": "dns-resolver",
+      "title": "Build a DNS resolver",
+      "status": "planned",
+      "level": "intermediate",
+      "minutes": 120,
+      "language": "Python",
+      "concepts": ["UDP", "binary protocols", "caching"]
+    },
+    {
+      "id": "git-object-store",
+      "title": "Build a Git-compatible object store",
+      "status": "planned",
+      "level": "intermediate",
+      "minutes": 180,
+      "language": "Python",
+      "concepts": ["content addressing", "compression", "trees", "commits"]
+    },
+    {
+      "id": "btree-database",
+      "title": "Build a SQLite-style B-tree",
+      "status": "planned",
+      "level": "advanced",
+      "minutes": 360,
+      "language": "Rust",
+      "concepts": ["pages", "indexes", "persistence", "crash safety"]
+    },
+    {
+      "id": "search-engine",
+      "title": "Build a search engine",
+      "status": "planned",
+      "level": "advanced",
+      "minutes": 480,
+      "language": "TypeScript",
+      "concepts": ["tokenization", "inverted indexes", "ranking", "crawling"]
+    }
+  ]
+}
+
