@@ -1,36 +1,45 @@
-# Contributing
+# Contributing to Build Everything
 
-Build Everything accepts small, testable learning labs.
+Build Everything is a public learning project for exploring better processes and making practical technical work easier to understand, test, and improve.
 
-The public catalog has Beginner, Advanced, and Expert filters that learners can turn on independently. Choose the honest level from the prerequisites and expected reasoning—not from how impressive the topic sounds.
+You can contribute without arriving with a finished project. Useful contributions include:
 
-## A good contribution
+- clarifying a confusing explanation;
+- adding a real-world use or limitation;
+- documenting a failure mode and safe recovery step;
+- improving accessibility or mobile readability;
+- proposing a practical Beginner, Advanced, or Expert lab;
+- adding tests that make a claimed result independently verifiable.
 
-- rebuilds one recognizable technology or subsystem;
-- works without paid services;
-- starts with a plain-language explanation and familiar real-life examples;
-- defines age guidance, prerequisites, the finished result, and where the idea is applied;
-- teaches the underlying contract rather than hiding it behind a framework;
-- has a bounded scope that a learner can finish;
-- includes automated acceptance tests;
-- includes a glossary and an “explain it back” check;
-- states security limitations and intentional omissions;
-- uses original writing or properly licensed sources.
+## Before you contribute
 
-## Lab lifecycle
+1. Use only public, synthetic, or contributor-owned information.
+2. Never include credentials, tokens, customer files, private communications, production data, or personal information.
+3. Explain the idea as well as the commands. A learner should understand what they built, where it is useful, and what can go wrong.
+4. Keep the result bounded. One project should produce one visible, testable outcome.
+5. Run `python scripts/check.py` before opening a pull request.
 
-1. **Proposed** — the catalog entry defines the outcome and proof.
-2. **In progress** — guide, implementation, and tests are under review.
-3. **Verified** — the explanation contract is complete and the proof command passes in CI from a clean checkout.
-4. **Needs repair** — the lab no longer passes or its guidance is stale.
+## Required project structure
 
-## Required files
+Every learning project must identify its level and include:
 
-Each ready lab needs a `README.md`, an implementation, and tests. Its guide must contain **The big idea**, **Where this is used**, **What you will make**, **Before you start**, **Build it**, **Prove it works**, **Explain it back**, **Glossary**, and **Safety and limits**. Add its audience and application metadata to `catalog/labs.json`, then run:
+- the big idea in plain language;
+- where the process is used in real life;
+- what the learner will make;
+- prerequisites and expected time;
+- step-by-step build instructions;
+- a visible proof or automated test;
+- one safe change to try;
+- an explain-it-back prompt;
+- a short glossary;
+- safety and limitation notes.
 
-```bash
-python scripts/check.py
-```
+## Age and supervision
 
-Do not submit generated filler, copied tutorials, referral links, or projects that require secrets to verify.
+The public guides can be read without a GitHub account. GitHub requires account holders to meet its minimum-age requirements, which are at least 13 and may be higher in some countries. Younger learners should explore with a parent, teacher, or guardian and should not create or share an account that violates GitHub's rules.
 
+## What participation does—and does not—mean
+
+A contribution improves public educational material. It does not create employment, a customer order, compensation, exclusivity, or an obligation for Zinvyl to accept or publish the work. Contributors retain the rights GitHub and the repository license provide for their original contribution.
+
+Start with an issue when the idea is still being shaped. Open a pull request when the change is ready to review and test.

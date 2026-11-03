@@ -4,6 +4,8 @@
 
 [Open the learning catalog](https://g-b-industry-llc.github.io/build-everything/) · [Start the verified beginner project](labs/http-server-python/README.md)
 
+[Explore the Zinvyl Community Lab](https://zinvyl.com/community/) · [Contribute an improvement](CONTRIBUTING.md)
+
 Build Everything is a free, open-source collection of guided projects for rebuilding the technologies that power modern computing. Every ready lab explains the idea in ordinary language, shows where people use it, guides one small build, and includes an automatic check that proves it works.
 
 This is not another list of links. A lab is not marked ready until a new learner can understand its purpose and a clean checkout can verify the result.
