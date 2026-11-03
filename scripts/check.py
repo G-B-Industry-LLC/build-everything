@@ -7,8 +7,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "catalog" / "labs.json"
+PUBLIC_CATALOG = ROOT / "docs" / "catalog.json"
 VALID_STATUS = {"planned", "in-progress", "verified", "needs-repair"}
-VALID_LEVEL = {"beginner", "intermediate", "advanced"}
+VALID_LEVEL = {"beginner", "advanced", "expert"}
 REQUIRED_GUIDE_SECTIONS = [
     "## The big idea",
     "## Where this is used",
@@ -24,6 +25,9 @@ REQUIRED_GUIDE_SECTIONS = [
 
 def validate_catalog() -> list[dict]:
     payload = json.loads(CATALOG.read_text(encoding="utf-8"))
+    public_payload = json.loads(PUBLIC_CATALOG.read_text(encoding="utf-8"))
+    if public_payload != payload:
+        raise ValueError("docs/catalog.json must match catalog/labs.json")
     if payload.get("schema_version") != "build-everything.catalog.v1":
         raise ValueError("unsupported catalog schema")
 
@@ -65,6 +69,9 @@ def validate_catalog() -> list[dict]:
                 isinstance(argument, str) and argument for argument in proof
             ):
                 raise ValueError(f"verified lab has no proof command: {lab_id}")
+    covered_levels = {lab["level"] for lab in labs}
+    if covered_levels != VALID_LEVEL:
+        raise ValueError(f"catalog must cover beginner, advanced, and expert tracks; found {sorted(covered_levels)}")
     return labs
 
 

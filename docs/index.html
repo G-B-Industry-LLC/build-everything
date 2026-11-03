@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free guided projects for learning how technology works by rebuilding it and proving the result.">
+  <title>Build Everything — Learn by rebuilding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#catalog">Skip to projects</a>
+  <header>
+    <p class="eyebrow">FREE · OPEN SOURCE · VERIFIED</p>
+    <h1>Build Everything</h1>
+    <p class="lede">Learn how technology works by rebuilding a small version, seeing where it is used, and proving your result works.</p>
+    <a class="primary" href="https://github.com/G-B-Industry-LLC/build-everything">View the code on GitHub</a>
+  </header>
+
+  <main>
+    <section aria-labelledby="choose-title">
+      <p class="eyebrow">CHOOSE YOUR VIEW</p>
+      <h2 id="choose-title">Turn learning tracks on or off</h2>
+      <p>Start with Beginner or combine tracks. The filter changes what you see; it does not change the code or hide prerequisites.</p>
+      <fieldset class="track-controls">
+        <legend>Visible learning tracks</legend>
+        <label><input type="checkbox" value="beginner" checked> <span><strong>Beginner</strong><small>Guided steps, analogies, glossary, safety</small></span></label>
+        <label><input type="checkbox" value="advanced"> <span><strong>Advanced</strong><small>Design choices, extensions, failure testing</small></span></label>
+        <label><input type="checkbox" value="expert"> <span><strong>Expert</strong><small>Security, performance, protocol limits</small></span></label>
+      </fieldset>
+      <p id="selection-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="catalog" aria-labelledby="catalog-title">
+      <p class="eyebrow">PROJECT CATALOG</p>
+      <h2 id="catalog-title">Pick something useful to understand</h2>
+      <div id="lab-list" class="lab-grid"></div>
+      <noscript>This catalog needs JavaScript to filter projects. The complete list remains available in the GitHub README.</noscript>
+    </section>
+
+    <section class="proof" aria-labelledby="proof-title">
+      <p class="eyebrow">WHAT VERIFIED MEANS</p>
+      <h2 id="proof-title">Understanding and working code</h2>
+      <ul>
+        <li>The big idea is explained without hidden jargon.</li>
+        <li>Real-world uses and prerequisites are stated.</li>
+        <li>The learner can see what success looks like.</li>
+        <li>Automatic tests prove the build works.</li>
+        <li>Explain-it-back questions check understanding.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><p>MIT licensed. No account, telemetry, payment, or proprietary runtime.</p></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

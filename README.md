@@ -2,6 +2,8 @@
 
 **Learn by rebuilding. Prove it works.**
 
+[Open the learning catalog](https://g-b-industry-llc.github.io/build-everything/) · [Start the verified beginner project](labs/http-server-python/README.md)
+
 Build Everything is a free, open-source collection of guided projects for rebuilding the technologies that power modern computing. Every ready lab explains the idea in ordinary language, shows where people use it, guides one small build, and includes an automatic check that proves it works.
 
 This is not another list of links. A lab is not marked ready until a new learner can understand its purpose and a clean checkout can verify the result.
@@ -17,6 +19,16 @@ You do not need to understand the whole internet before you begin.
 5. Change one small thing and explain what happened.
 
 Teen learners can use the beginner track independently if they are comfortable running a command. Younger learners should work with a parent, teacher, or mentor. The guide explains the ideas, but an adult should still supervise software installation and terminal use.
+
+### Turn learning tracks on or off
+
+The catalog provides three independent filters:
+
+- **Beginner** — analogies, guided steps, expected results, glossary, and safety prompts.
+- **Advanced** — design decisions, fewer hints, extension work, and stronger failure testing.
+- **Expert** — protocol limits, security analysis, performance measurement, and defensible tradeoffs.
+
+Turn on one track to focus or combine tracks to compare how systems grow in complexity. These are learning views, not age gates; each lab still states its actual prerequisites.
 
 ## Why this exists
 
@@ -49,10 +61,10 @@ Then visit `http://127.0.0.1:8080/health`.
 | Lab | Level | Time | Status |
 | --- | --- | ---: | --- |
 | [HTTP server from sockets](labs/http-server-python/README.md) | Beginner | 45 min | Verified |
-| DNS resolver | Intermediate | 2 hr | Planned |
-| Git-compatible object store | Intermediate | 3 hr | Planned |
-| SQLite-style B-tree | Advanced | 6 hr | Planned |
-| Search engine | Advanced | 8 hr | Planned |
+| DNS resolver | Advanced | 2 hr | Planned |
+| Git-compatible object store | Advanced | 3 hr | Planned |
+| SQLite-style B-tree | Expert | 6 hr | Planned |
+| Search engine | Expert | 8 hr | Planned |
 
 Catalog metadata lives in [`catalog/labs.json`](catalog/labs.json) and is validated in CI.
 

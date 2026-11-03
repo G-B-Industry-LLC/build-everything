@@ -1,0 +1,72 @@
+{
+  "schema_version": "build-everything.catalog.v1",
+  "labs": [
+    {
+      "id": "http-server-python",
+      "title": "Build an HTTP server from sockets",
+      "status": "verified",
+      "level": "beginner",
+      "minutes": 45,
+      "language": "Python",
+      "audience": "Ages 12+ with a mentor; teens with basic command-line comfort",
+      "prerequisites": ["Install Python 3.11 or newer", "Run a command in a terminal", "Read basic Python variables and functions"],
+      "result": "A tiny local website server with a home page and a health-check address",
+      "applications": ["websites", "mobile app backends", "game services", "health checks"],
+      "path": "labs/http-server-python",
+      "proof": ["python", "-m", "unittest", "discover", "-s", "labs/http-server-python/tests", "-v"],
+      "concepts": ["TCP", "HTTP/1.1", "request parsing", "status codes"]
+    },
+    {
+      "id": "dns-resolver",
+      "title": "Build a DNS resolver",
+      "status": "planned",
+      "level": "advanced",
+      "minutes": 120,
+      "language": "Python",
+      "audience": "Teens and adults with beginner Python experience",
+      "prerequisites": ["Complete the HTTP server lab", "Read and write bytes in Python"],
+      "result": "A small program that turns a domain name into an internet address",
+      "applications": ["opening websites", "email delivery", "service discovery"],
+      "concepts": ["UDP", "binary protocols", "caching"]
+    },
+    {
+      "id": "git-object-store",
+      "title": "Build a Git-compatible object store",
+      "status": "planned",
+      "level": "advanced",
+      "minutes": 180,
+      "language": "Python",
+      "audience": "Teens and adults with intermediate Python experience",
+      "prerequisites": ["Use files and dictionaries in Python", "Understand hashes at a basic level"],
+      "result": "A content-addressed store for files, folders, and saved versions",
+      "applications": ["version control", "backup deduplication", "software collaboration"],
+      "concepts": ["content addressing", "compression", "trees", "commits"]
+    },
+    {
+      "id": "btree-database",
+      "title": "Build a SQLite-style B-tree",
+      "status": "planned",
+      "level": "expert",
+      "minutes": 360,
+      "language": "Rust",
+      "audience": "Advanced teen and adult learners",
+      "prerequisites": ["Write and test Rust programs", "Understand files and ordered data"],
+      "result": "A persistent tree that can find stored records efficiently",
+      "applications": ["databases", "file systems", "search indexes"],
+      "concepts": ["pages", "indexes", "persistence", "crash safety"]
+    },
+    {
+      "id": "search-engine",
+      "title": "Build a search engine",
+      "status": "planned",
+      "level": "expert",
+      "minutes": 480,
+      "language": "TypeScript",
+      "audience": "Advanced teen and adult learners",
+      "prerequisites": ["Write TypeScript", "Understand maps, sets, and sorting"],
+      "result": "A small document search tool that ranks matching results",
+      "applications": ["site search", "document discovery", "knowledge tools"],
+      "concepts": ["tokenization", "inverted indexes", "ranking", "crawling"]
+    }
+  ]
+}

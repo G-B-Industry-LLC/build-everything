@@ -2,6 +2,8 @@
 
 Build Everything accepts small, testable learning labs.
 
+The public catalog has Beginner, Advanced, and Expert filters that learners can turn on independently. Choose the honest level from the prerequisites and expected reasoning—not from how impressive the topic sounds.
+
 ## A good contribution
 
 - rebuilds one recognizable technology or subsystem;
